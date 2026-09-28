@@ -23,4 +23,7 @@ Command to run app through docker:
 ```
 docker run --name k8s-app-demo -p 8000:8000 k8s-app-demo:0.1.0
 ```
-
+Command to restart container:
+```
+docker start -a k8s-app-demo
+```
