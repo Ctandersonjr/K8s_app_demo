@@ -14,7 +14,13 @@ Steps:
 8. Verify it running locally in minikube
     * Can't do step 8 yet
 
-Command to run app:
+Command to run app through uv:
 ```
 uv run uvicorn k8s_app_demo.main:app --reload
 ```
+
+Command to run app through docker:
+```
+docker run --name k8s-app-demo -p 8000:8000 k8s-app-demo:0.1.0
+```
+
