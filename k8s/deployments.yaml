@@ -15,6 +15,14 @@ spec:
       containers:
       - name: demo-container
         image: k8s-app-demo:0.1.0
+        readinessProbe:
+          httpGet:
+            path: /Health
+            port: 8000
+        livenessProbe:
+          httpGet:
+            path: /Health
+            port: 8000 
         ports:
         - name: http
           containerPort: 8000
